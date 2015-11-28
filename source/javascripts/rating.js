@@ -47,27 +47,27 @@ function changeStars(n, r) {
 	switch (r) {
 	    case 1: $(':radio[name=rating_' + n + ']:nth(0)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('#rated_' + n ).closest().css({'background-color':'white'});
 	    		break;
 	    case 2: $(':radio[name=rating_' + n + ']:nth(1)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('#rated_' + n ).closest().css({'background-color':'white'});
 	    		break;
 	    case 3: $(':radio[name=rating_' + n + ']:nth(2)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('#rated_' + n ).closest().css({'background-color':'white'});
 	    		break;
 	    case 4: $(':radio[name=rating_' + n + ']:nth(3)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('#rated_' + n ).closest().css({'background-color':'white'});
 	    		break;
 	    case 5: $(':radio[name=rating_' + n + ']:nth(4)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('#rated_' + n ).closest().css({'background-color':'white'});
 	    		break;
 	    default: $(':radio[name=rating_' + n + ']').removeAttr('checked');
 	    		$('#rated_' + n ).text("Diese Bier hast du noch nicht bewertet!");
-	    		$('article').eq(n-1).css({'background-color':'#D6C6CF'});
+	    		$('#rated_' + n ).closest().css({'background-color':'#D6C6CF'});
 	}
 }
 
@@ -88,6 +88,8 @@ function setAvg(num) {
 }
 
 function postRating(n, r){
-	$.post("/api/set/" + n + "/" + user + "/" + r, function(){});
+	$.post("/api/set/" + n + "/" + user + "/" + r, function(){
+		site.re
+	});
 	console.log("/api/set/" + n + "/" + user + "/" + r);
 }
