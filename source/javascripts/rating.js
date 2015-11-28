@@ -16,9 +16,11 @@ function setRatingForArticle(num){
 		});
 
 
-	$(':radio').change(  
-		function(){    
-			console.log("changed"); 
+	$(':radio').click( 
+		function(){ 
+			var value = $(this).val();   
+			console.log("changed to: " + value); 
+			setRating(num, value);
 		});
 }	
 
@@ -75,4 +77,9 @@ function setAvg(n) {
 		$('#avgRating_'+n).text(avg.toString());
 		console.log("avg1 " + avg);
 	});
+}
+
+function setRating(n, r){
+	$.post("/api/set/" + n + "/" + user + "/" + r, function(){});
+	console.log("/api/set/" + n + "/" + user + "/" + r);
 }
