@@ -26,7 +26,7 @@ function setRating(num) {
 	var rating = 0;
 	if(user == "Default"){
 		console.log("Default Ansicht");
-		$.getJSON( "images/1.json", function( data ) {
+		$.getJSON( "/api/get/" + num, function( data ) {
 			setAvg(num);
 		});
 	}else{
@@ -64,7 +64,7 @@ function changeStars(n, r) {
 
 function setAvg(n) {
 	var avg = 0;
-	$.getJSON( "images/1.json", function( data ) {
+	$.getJSON( "/api/get/" + num, function( data ) {
 		var sum = 0;
 		var anz = 0;
 		$.each(data.ratings, function(i, item) {
