@@ -30,7 +30,7 @@ function setRating(num) {
 			setAvg(num);
 		});
 	}else{
-		$.getJSON( "images/1.json", function( data ) {
+		$.getJSON( "/api/get/" + num, function( data ) {
 			rating = data.ratings[user];
 			console.log(user + ", " + rating);
 			changeStars(num, rating);
