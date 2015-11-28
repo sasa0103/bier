@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bier 3"
+title: "Liberty Ale"
 date: 2015-11-27 14:18:24 +0100
 comments: true
 categories: [Land USA, Brauerei Anchor Brewing Company, IBU 47, Vol 5.9%]

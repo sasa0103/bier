@@ -108,6 +108,7 @@ task :new_post, :title do |t, args|
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   puts "Creating new post: #{filename}"
+  @number = 
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
@@ -118,6 +119,15 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts ""
     post.puts "{% img /images/bier/bild.jpg %}"
+    post.puts '<span class="star-rating">'
+    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"1\"><i></i>"
+    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"2\"><i></i>"
+    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"3\"><i></i>"
+    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"4\"><i></i>"
+    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"5\"><i></i>"
+    post.puts "</span>"
+    post.puts "<div class=\"fa fa-users\"> Bewertung: <span id=\"avgRating_#{title.gsub(/Bier /,'')}\"></span></div>"
+    post.puts "<div id=\"rated_#{title.gsub(/Bier /,'')}\"></div>"
   end
 end
 

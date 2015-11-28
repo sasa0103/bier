@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Festland"
+date: 2015-11-28 23:06:50 +0100
+comments: true
+categories: [Land Deutschland, Brauerei KUEHN KUNZ ROSEN, Vol 6.2%]
+---
+
+{% img /images/bier/IMG_20151120_205826.jpg %}
+<span class="star-rating">
+<input type="radio" name="rating_6" value="1"><i></i>
+<input type="radio" name="rating_6" value="2"><i></i>
+<input type="radio" name="rating_6" value="3"><i></i>
+<input type="radio" name="rating_6" value="4"><i></i>
+<input type="radio" name="rating_6" value="5"><i></i>
+</span>
+<div class="fa fa-users"> Bewertung: <span id="avgRating_6"></span></div>
+<div id="rated_6"></div>
