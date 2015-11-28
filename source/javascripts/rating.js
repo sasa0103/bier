@@ -89,7 +89,7 @@ function setAvg(num) {
 
 function postRating(n, r){
 	$.post("/api/set/" + n + "/" + user + "/" + r, function(){
-		site.re
+		location.reload();
 	});
 	console.log("/api/set/" + n + "/" + user + "/" + r);
 }
