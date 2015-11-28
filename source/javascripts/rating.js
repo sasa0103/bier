@@ -16,7 +16,7 @@ function setRatingForArticle(num){
 		});
 
 
-	$(':radio').click( 
+	$(':radio[name=rating_' + num).click( 
 		function(){ 
 			var value = $(this).val();   
 			console.log("changed to: " + value); 
@@ -69,7 +69,7 @@ function changeStars(n, r) {
 	}
 }
 
-function setAvg(n) {
+function setAvg(num) {
 	var avg = 0;
 	$.getJSON( "/api/get/" + num, function( data ) {
 		var sum = 0;
