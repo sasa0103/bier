@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Pumpkin Ale"
+date: 2015-11-26 16:45:44 +0100
+comments: true
+categories: [Land Canada, Brauerei Steamworks, IBU 16, Vol 6.5%, hell, Kürbis]
+---
+
+{% img /images/bier/IMG_20151120_225232.jpg %}
+
+<span class="star-rating">  
+	<input type="radio" name="rating_1" value="1"><i></i>
+	<input type="radio" name="rating_1" value="2"><i></i>
+	<input type="radio" name="rating_1" value="3"><i></i>
+	<input type="radio" name="rating_1" value="4"><i></i>
+	<input type="radio" name="rating_1" value="5"><i></i>
+</span>
+<div class="fa fa-users"> Bewertung: <span id="avgRating_1"></span></div>
+<div id="rated_1"></div>
