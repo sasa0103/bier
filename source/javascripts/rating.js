@@ -45,27 +45,27 @@ function changeStars(n, r) {
 	switch (r) {
 	    case 1: $(':radio[name=rating_' + n + ']:nth(0)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('article').eq(n).css({'background-color':'white'});
 	    		break;
 	    case 2: $(':radio[name=rating_' + n + ']:nth(1)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('article').eq(n).css({'background-color':'white'});
 	    		break;
 	    case 3: $(':radio[name=rating_' + n + ']:nth(2)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('article').eq(n).css({'background-color':'white'});
 	    		break;
 	    case 4: $(':radio[name=rating_' + n + ']:nth(3)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('article').eq(n).css({'background-color':'white'});
 	    		break;
 	    case 5: $(':radio[name=rating_' + n + ']:nth(4)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
-	    		$('article').eq(n-1).css({'background-color':'white'});
+	    		$('article').eq(n).css({'background-color':'white'});
 	    		break;
 	    default: $(':radio[name=rating_' + n + ']').removeAttr('checked');
 	    		$('#rated_' + n ).text("Diese Bier hast du noch nicht bewertet!");
-	    		$('article').eq(n-1).css({'background-color':'#aa5285'});
+	    		$('article').eq(n).css({'background-color':'#aa5285'});
 	}
 }
 
@@ -79,7 +79,7 @@ function setAvg(num) {
 		    anz += 1;
 		});
 		avg = sum / anz;
-		$('#avgRating_'+n).text(avg.toString());
+		$('#avgRating_'+num).text(avg.toString());
 		console.log("avg1 " + avg);
 	});
 }
