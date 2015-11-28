@@ -87,9 +87,17 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 }
 
 h1 {
-	font-family: 'Lobster', sans-serif;
+  font-family: 'Lobster';
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
+}
+
+article a{
+  color: #7A5F58;
+}
+
+article a:hover{
+  color: #5A4741;
 }
