@@ -16,7 +16,7 @@ function setRatingForArticle(num){
 		});
 
 
-	$(':radio[name=rating_' + num).click( 
+	$(':radio[name=rating_' + num + ']').click( 
 		function(){ 
 			var value = $(this).val();   
 			console.log("changed to: " + value); 
