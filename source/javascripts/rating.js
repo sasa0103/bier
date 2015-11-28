@@ -20,7 +20,7 @@ function setRatingForArticle(num){
 		function(){ 
 			var value = $(this).val();   
 			console.log("changed to: " + value); 
-			setRating(num, value);
+			postRating(num, value);
 		});
 }	
 
@@ -45,18 +45,23 @@ function changeStars(n, r) {
 	switch (r) {
 	    case 1: $(':radio[name=rating_' + n + ']:nth(0)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
+	    		$('article').eq(n-1).css({'background-color':'white'});
 	    		break;
 	    case 2: $(':radio[name=rating_' + n + ']:nth(1)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
+	    		$('article').eq(n-1).css({'background-color':'white'});
 	    		break;
 	    case 3: $(':radio[name=rating_' + n + ']:nth(2)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
+	    		$('article').eq(n-1).css({'background-color':'white'});
 	    		break;
 	    case 4: $(':radio[name=rating_' + n + ']:nth(3)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
+	    		$('article').eq(n-1).css({'background-color':'white'});
 	    		break;
 	    case 5: $(':radio[name=rating_' + n + ']:nth(4)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
+	    		$('article').eq(n-1).css({'background-color':'white'});
 	    		break;
 	    default: $(':radio[name=rating_' + n + ']').removeAttr('checked');
 	    		$('#rated_' + n ).text("Diese Bier hast du noch nicht bewertet!");
@@ -79,7 +84,7 @@ function setAvg(n) {
 	});
 }
 
-function setRating(n, r){
+function postRating(n, r){
 	$.post("/api/set/" + n + "/" + user + "/" + r, function(){});
 	console.log("/api/set/" + n + "/" + user + "/" + r);
 }
