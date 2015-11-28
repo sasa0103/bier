@@ -1,4 +1,5 @@
-var user = "Default";
+var user = localStorage.getItem("user");
+if(user == null){user = "Default"};
 
 $('article').each(function(n){
 	setRatingForArticle(n+1)
@@ -12,6 +13,7 @@ function setRatingForArticle(num){
 	$('#user').change(
 		function(){
 			user = this.options[this.selectedIndex].text;
+			localStorage.setItem("user", user);
 			setRating(num);
 		});
 
