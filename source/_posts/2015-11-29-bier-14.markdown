@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Bier 14"
+title: "Killer Cucumber Ale"
 date: 2015-11-29 11:12:15 +0100
 comments: true
-categories: [Land , Brauerei , IBU , Vol , xxx]
+categories: [Land Canada, Brauerei Steamworks, IBU 25, Vol 4.7%, Gurke]
 ---
 
-{% img /images/bier/bild.jpg %}
+{% img /images/bier/IMG_20151128_234822.jpg %}
 <span class="star-rating">
 <input type="radio" name="rating_14" value="1"><i></i>
 <input type="radio" name="rating_14" value="2"><i></i>
