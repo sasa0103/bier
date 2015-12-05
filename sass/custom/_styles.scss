@@ -30,7 +30,7 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 
 
 //Rating stuff
-.star-rating {
+/*.star-rating {
   font-size: 0;
   white-space: nowrap;
   display: inline-block;
@@ -79,7 +79,7 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 }
 .star-rating i ~ i ~ i ~ i ~ i {
   width: 100%;
-}
+}*/
 
 #user {
 	margin-top: 20px;
@@ -104,4 +104,61 @@ article h1{
 
 article a:hover{
   color: #5A4741;
+}
+
+
+/*** basic styles ***/
+
+input[type=radio].with-font{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+    
+input[type=radio].with-font ~ label:before{
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f096";
+    letter-spacing: 10px;
+    font-size: 1.2em;
+    color: #535353;
+    width: 1.4em;
+}
+input[type=radio][value="2"].with-font ~ label:before{
+    content: "\f10c";
+}
+
+
+input[type=radio].with-font:checked + label:before {
+    content: "\f046";
+    font-size: 1.2em;
+    color: red;
+    letter-spacing: 5px;
+}
+
+input[type=radio][value="2"].with-font:checked + label:before{
+    content: "\f119";
+}
+input[type=radio][value="3"].with-font:checked + label:before{
+    content: "\f11a";
+}
+input[type=radio][value="4"].with-font:checked + label:before{
+    content: "\f118";
+}
+input[type=radio][value="5"].with-font:checked + label:before{
+    content: "\f006";
+}
+
+input[type=radio].with-font:checked + label {
+    color: red;  
+}
+input[type=radio].with-font:focus ~ label:before
+input[type=radio].with-font:focus ~ label
+{                
+    color: yellow;
 }

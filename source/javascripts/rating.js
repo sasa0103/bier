@@ -32,6 +32,7 @@ function setRating(num) {
 		console.log("Default Ansicht");
 			$.getJSON( "/api/get/" + num, function( data ) {
 			/*$.getJSON( "images/" + num + ".json", function( data ) {*/
+			changeStars(num, 6);
 			setAvg(num);
 		});
 	}else{
@@ -47,6 +48,11 @@ function setRating(num) {
 
 function changeStars(n, r) {
 	console.log("change star" + n);
+	$('#1_' + n ).removeAttr('checked');
+	$('#2_' + n ).removeAttr('checked');
+	$('#3_' + n ).removeAttr('checked');
+	$('#4_' + n ).removeAttr('checked');
+	$('#5_' + n ).removeAttr('checked');
 	switch (r) {
 	    case 1: $(':radio[name=rating_' + n + ']:nth(0)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
@@ -78,15 +84,53 @@ function setAvg(num) {
 	var avg = 0;
 	$.getJSON( "/api/get/" + num, function( data ) {
 	/*$.getJSON( "images/" + num + ".json", function( data ) {*/
-		var sum = 0;
-		var anz = 0;
+		var sum1 = 0;
+		var sum2 = 0;
+		var sum3 = 0;
+		var sum4 = 0;
+		var sum5 = 0;
 		$.each(data.ratings, function(i, item) {
-		    sum += item;
+		    switch (item) {
+	    		case 1: sum1 += 1;
+	    				break;
+	    		case 2: sum2 += 1;
+	    				break;
+	    		case 3: sum3 += 1;
+	    				break;
+	    		case 4: sum4 += 1;
+	    				break;
+	    		case 5: sum5 += 1;
+	    				break;
+	    		default: break;
 		    anz += 1;
+			}
 		});
-		avg = Math.round(sum / anz).toFixed(2);;
-		$('#avgRating_'+num).text(avg.toString());
-		console.log("avg1 " + avg);
+		var a =[sum1, sum2, sum3, sum4, sum5];
+		var max = 0;
+		var maxString;
+		var i = 0;
+		a.forEach(function(el) {
+			i += 1;
+			if (max < el){
+				max = el;
+				maxString = i;
+			}
+		});
+		switch (maxString) {
+    		case 1: maxString = "fa fa-check-square-o";
+    				break;
+    		case 2: maxString = "fa fa-frown-o ";
+    				break;
+    		case 3: maxString = "fa fa-meh-o";
+    				break;
+    		case 4: maxString = "fa fa-smile-o";
+    				break;
+    		case 5: maxString = "fa fa-star-o";
+    				break;
+    		default: break;
+		}
+		console.log(maxString);
+		$('#avgRating_'+num).addClass(maxString);
 	});
 }
 
