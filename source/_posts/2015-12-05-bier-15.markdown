@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Bier 15"
+date: 2015-12-05 15:43:49 +0100
+comments: true
+categories: [Land , Brauerei , IBU , Vol , xxx]
+bierNummer: 15
+---
+
+{% img /images/bier/bild.jpg %}

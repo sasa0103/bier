@@ -2,7 +2,7 @@ var user = localStorage.getItem("user");
 if(user == null){user = "Default"};
 
 $('article').each(function(n){
-	setRatingForArticle(n+1)
+	setRatingForArticle(n+1);
 })
 
 
@@ -30,13 +30,13 @@ function setRating(num) {
 	var rating = 0;
 	if(user == "Default"){
 		console.log("Default Ansicht");
-			$.getJSON( "/api/get/" + num, function( data ) {
-			/*$.getJSON( "images/" + num + ".json", function( data ) {*/
+			/*$.getJSON( "/api/get/" + num, function( data ) {*/
+			$.getJSON( "images/" + num + ".json", function( data ) {
 			setAvg(num);
 		});
 	}else{
-			$.getJSON( "/api/get/" + num, function( data ) {
-			/*$.getJSON( "images/" + num + ".json", function( data ) {*/
+			/*$.getJSON( "/api/get/" + num, function( data ) {*/
+			$.getJSON( "images/" + num + ".json", function( data ) {
 			rating = data.ratings[user];
 			console.log(user + ", " + rating);
 			changeStars(num, rating);
@@ -46,6 +46,7 @@ function setRating(num) {
 }
 
 function changeStars(n, r) {
+	console.log("change star" + n);
 	switch (r) {
 	    case 1: $(':radio[name=rating_' + n + ']:nth(0)').attr("checked", true);
 	    		$('#rated_' + n ).text("");
@@ -75,8 +76,8 @@ function changeStars(n, r) {
 
 function setAvg(num) {
 	var avg = 0;
-	$.getJSON( "/api/get/" + num, function( data ) {
-	/*$.getJSON( "images/" + num + ".json", function( data ) {*/
+	/*$.getJSON( "/api/get/" + num, function( data ) {*/
+	$.getJSON( "images/" + num + ".json", function( data ) {
 		var sum = 0;
 		var anz = 0;
 		$.each(data.ratings, function(i, item) {

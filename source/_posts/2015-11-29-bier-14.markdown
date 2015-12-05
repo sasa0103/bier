@@ -4,15 +4,7 @@ title: "Killer Cucumber Ale"
 date: 2015-11-29 11:12:15 +0100
 comments: true
 categories: [Land Canada, Brauerei Steamworks, IBU 25, Vol 4.7%, Gurke]
+bierNummer: 14
 ---
 
 {% img /images/bier/IMG_20151128_234822.jpg %}
-<span class="star-rating">
-<input type="radio" name="rating_14" value="1"><i></i>
-<input type="radio" name="rating_14" value="2"><i></i>
-<input type="radio" name="rating_14" value="3"><i></i>
-<input type="radio" name="rating_14" value="4"><i></i>
-<input type="radio" name="rating_14" value="5"><i></i>
-</span>
-<div class="fa fa-users"> Bewertung: <span id="avgRating_14"></span></div>
-<div id="rated_14"></div>

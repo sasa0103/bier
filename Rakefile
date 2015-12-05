@@ -116,18 +116,10 @@ task :new_post, :title do |t, args|
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
     post.puts "categories: [Land , Brauerei , IBU , Vol , xxx]"
+    post.puts "bierNummer: #{title.gsub(/Bier /,'')}"
     post.puts "---"
     post.puts ""
     post.puts "{% img /images/bier/bild.jpg %}"
-    post.puts '<span class="star-rating">'
-    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"1\"><i></i>"
-    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"2\"><i></i>"
-    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"3\"><i></i>"
-    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"4\"><i></i>"
-    post.puts "<input type=\"radio\" name=\"rating_#{title.gsub(/Bier /,'')}\" value=\"5\"><i></i>"
-    post.puts "</span>"
-    post.puts "<div class=\"fa fa-users\"> Bewertung: <span id=\"avgRating_#{title.gsub(/Bier /,'')}\"></span></div>"
-    post.puts "<div id=\"rated_#{title.gsub(/Bier /,'')}\"></div>"
   end
 end
 

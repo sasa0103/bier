@@ -4,15 +4,7 @@ title: "Achel Bruin"
 date: 2015-11-28 23:12:27 +0100
 comments: true
 categories: [Land Belgien, Brauerei Achel, IBU 50, Vol 8%]
+bierNummer: 7
 ---
 
 {% img /images/bier/IMG_20151120_212735.jpg %}
-<span class="star-rating">
-<input type="radio" name="rating_7" value="1"><i></i>
-<input type="radio" name="rating_7" value="2"><i></i>
-<input type="radio" name="rating_7" value="3"><i></i>
-<input type="radio" name="rating_7" value="4"><i></i>
-<input type="radio" name="rating_7" value="5"><i></i>
-</span>
-<div class="fa fa-users"> Bewertung: <span id="avgRating_7"></span></div>
-<div id="rated_7"></div>
