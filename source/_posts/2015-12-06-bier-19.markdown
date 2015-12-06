@@ -1,0 +1,10 @@
+---
+layout: post
+title: "7:45 Escalation"
+date: 2015-12-06 12:03:25 +0100
+comments: true
+categories: [Land Deutschland, Brauerei Crew Republic, IBU 83, Vol 8.3%]
+bierNummer: 19
+---
+
+{% img /images/bier/IMG_20151204_205457.jpg %}

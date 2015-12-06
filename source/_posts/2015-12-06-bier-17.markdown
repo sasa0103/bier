@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Foundation 11"
+date: 2015-12-06 12:03:18 +0100
+comments: true
+categories: [Land Deutschland, Brauerei Crew Republic, IBU 40, Vol 5.6%, fruchtig, Zitrusnote]
+bierNummer: 17
+---
+
+{% img /images/bier/IMG_20151204_195907.jpg %}

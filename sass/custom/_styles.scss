@@ -137,8 +137,9 @@ input[type=radio][value="2"].with-font ~ label:before{
 input[type=radio].with-font:checked + label:before {
     content: "\f046";
     font-size: 1.2em;
-    color: red;
+    color: #3F5749;
     letter-spacing: 5px;
+    font-weight: bold;
 }
 
 input[type=radio][value="2"].with-font:checked + label:before{
@@ -155,7 +156,8 @@ input[type=radio][value="5"].with-font:checked + label:before{
 }
 
 input[type=radio].with-font:checked + label {
-    color: red;  
+    color: #3F5749;  
+    font-weight: bold;
 }
 input[type=radio].with-font:focus ~ label:before
 input[type=radio].with-font:focus ~ label

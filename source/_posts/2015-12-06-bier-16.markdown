@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Just Pils"
+date: 2015-12-06 12:03:12 +0100
+comments: true
+categories: [Land Deutschland, Brauerei Von Freude, IBU 25, Vol 5.1%]
+bierNummer: 16
+---
+
+{% img /images/bier/IMG_20151204_193335.jpg %}

@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Nut Brown Ale"
+date: 2015-12-06 11:59:11 +0100
+comments: true
+categories: [Land England, Brauerei Samuel Smith Old Brewery, IBU 31, Vol 5.0%]
+bierNummer: 15
+---
+
+{% img /images/bier/IMG_20151204_191654.jpg %}

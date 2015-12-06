@@ -1,5 +1,11 @@
 var user = localStorage.getItem("user");
 if(user == null){user = "Default"};
+$("#user").val(user);
+
+$(function() {
+    $('.span4').matchHeight();
+    console.log("blaaa");
+});
 
 $('article').each(function(n){
 	setRatingForArticle(n+1);
@@ -7,7 +13,6 @@ $('article').each(function(n){
 
 
 function setRatingForArticle(num){
-	console.log("artikel:" + num);
 	setRating(num);
 
 	$('#user').change(
@@ -21,7 +26,6 @@ function setRatingForArticle(num){
 	$(':radio[name=rating_' + num + ']').click( 
 		function(){ 
 			var value = $(this).val();   
-			console.log("changed to: " + value); 
 			postRating(num, value);
 		});
 }	
@@ -29,7 +33,6 @@ function setRatingForArticle(num){
 function setRating(num) {
 	var rating = 0;
 	if(user == "Default"){
-		console.log("Default Ansicht");
 			$.getJSON( "/api/get/" + num, function( data ) {
 			/*$.getJSON( "images/" + num + ".json", function( data ) {*/
 			changeStars(num, 6);
@@ -39,7 +42,6 @@ function setRating(num) {
 			$.getJSON( "/api/get/" + num, function( data ) {
 			/*$.getJSON( "images/" + num + ".json", function( data ) {*/
 			rating = data.ratings[user];
-			console.log(user + ", " + rating);
 			changeStars(num, rating);
 			setAvg(num);
 		});
@@ -47,7 +49,6 @@ function setRating(num) {
 }
 
 function changeStars(n, r) {
-	console.log("change star" + n);
 	$('#1_' + n ).removeAttr('checked');
 	$('#2_' + n ).removeAttr('checked');
 	$('#3_' + n ).removeAttr('checked');
@@ -76,7 +77,7 @@ function changeStars(n, r) {
 	    		break;
 	    default: $(':radio[name=rating_' + n + ']').removeAttr('checked');
 	    		$('#rated_' + n ).text("Diese Bier hast du noch nicht bewertet!");
-	    		$('#rated_' + n ).closest('article').css({'background-color':'#D6C6CF'});
+	    		$('#rated_' + n ).closest('article').css({'background-color':'#BDAA95'});
 	}
 }
 
@@ -129,7 +130,6 @@ function setAvg(num) {
     				break;
     		default: break;
 		}
-		console.log(maxString);
 		$('#avgRating_'+num).addClass(maxString);
 	});
 }
@@ -138,5 +138,4 @@ function postRating(n, r){
 	$.post("/api/set/" + n + "/" + user + "/" + r, function(){
 		location.reload();
 	});
-	console.log("/api/set/" + n + "/" + user + "/" + r);
 }
