@@ -75,6 +75,9 @@ function changeStars(n, r) {
 	    		$('#rated_' + n ).text("");
 	    		$('#rated_' + n ).closest('article').css({'background-color':'white'});
 	    		break;
+	    case 6: $('#rated_' + n ).text("");
+	    		$('#rated_' + n ).closest('article').css({'background-color':'white'});
+	    		break;
 	    default: $(':radio[name=rating_' + n + ']').removeAttr('checked');
 	    		$('#rated_' + n ).text("Diese Bier hast du noch nicht bewertet!");
 	    		$('#rated_' + n ).closest('article').css({'background-color':'#BDAA95'});
