@@ -2,9 +2,14 @@ var user = localStorage.getItem("user");
 if(user == null){user = "Default"};
 $("#user").val(user);
 
+if(user == "Default"){
+	$("input[type=radio]").attr('disabled', true);
+}else{
+	$("input[type=radio]").attr('disabled', false);
+}
+
 $(function() {
     $('.span4').matchHeight();
-    console.log("blaaa");
 });
 
 $('article').each(function(n){
@@ -19,6 +24,13 @@ function setRatingForArticle(num){
 		function(){
 			user = this.options[this.selectedIndex].text;
 			localStorage.setItem("user", user);
+
+			if(user == "Default"){
+				$("input[type=radio]").attr('disabled', true);
+			}else{
+				$("input[type=radio]").attr('disabled', false);
+			}
+			
 			setRating(num);
 		});
 
